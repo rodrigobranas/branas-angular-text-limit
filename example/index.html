@@ -1,0 +1,18 @@
+<html ng-app="textLimitExample">
+<head>
+	<title>Text Limit</title>
+	<script src="lib/angular.js"></script>
+	<script src="lib/textlimit.js"></script>
+	<script>
+		angular.module("textLimitExample", ["textLimit"]);
+		angular.module("textLimitExample").controller("textLimitExampleCtrl", function ($scope) {
+			$scope.app = "Text Limit Example";
+		});
+	</script>
+</head>
+<body ng-controller="textLimitExampleCtrl">
+	<h3>{{app}}</h3>
+	Limiting to 10 characters
+	<input type="text" ng-model="name" placeholder="Name" text-limit="10"/>
+</body>
+</html>
